@@ -1,0 +1,49 @@
+<div id="new-container">
+<span>After you created your ad, your ad will be published automatically.</span>
+<br/>
+  <div id="new-form-right">
+    <span style="font-weight:bold;font-size:16px;">Remember</span><br/><br/>
+    <span class="eng">Duplicate ads will be refused</span><br/><span class="my">Iklan yang duplikasi/ sama akan ditolak</span><br/><br/>
+    <span class="eng">One ad per item</span><br/> <span class="my">Satu iklan untuk satu barang.</span><br/><br/>
+    <span class="eng">Choose a title that is as descriptive as possible. </span><br/><span class="my">Pilih deskripsi yang paling sesuai.</span><br/><br/>
+    <span class="eng">Pure Marketing ads are not allowed. Only concrete goods.</span><br/><span class="my"> Iklan yang berunsur pemasaran tidak dibenarkan. Hanya barang yang fizikal.</span><br/><br/>
+    <span class="eng">Delete the old ads first in order to insert it again.</span><br/> <span class="my">Padam iklan yang lama sebelum menghantar iklan yang sama sekali lagi.</span><br/><br/>
+  
+    <span style="font-size:12px;font-weight:bold;color:red;">
+      Shop safely<br/>Berniaga dengan berhati-hati
+    </span>
+  </div>
+
+<div id="new-form-left">
+    <table>
+      <% form_for(@ad) do |f| %>
+      <tr>
+        <td colspan="2"><%= f.error_messages %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :ad_name %></td>
+        <td><%= f.text_field :ad_name %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :description %></td>
+        <td><%= f.text_area :description, :size=>"35x11" %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :user_email %></td>
+        <td><%= f.text_field :user_email %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :price %></td>
+        <td><%= f.text_field :price %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :cat %></td>
+        <td><%= f.text_field :cat %></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><%= f.submit "Create" %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

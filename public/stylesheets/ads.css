@@ -1,0 +1,175 @@
+body{
+    width:auto;
+    font-family:verdana;
+    font-size:12px;
+    margin: 0 0 0 0;
+    background-color:#ffffeb;
+}
+
+#container{
+    width:auto;
+    margin:0 0 0 0;
+}
+
+#header{
+    width: auto;
+    height: 150px;
+}
+
+#banner{
+    height:70px;
+    margin: 0 0 0 0;
+    padding-top:30px;
+    padding-left:20px;
+    width:auto;
+    font-family:cursive;
+    font-size:30px;
+    font-weight:bolder;
+    color:#ee4455;
+    background-color:#bc6212;
+}
+
+#menu{
+    margin: 0 0 0 0;
+    background:transparent;
+    width:auto;
+    height:50px;
+}
+
+#menu ul{
+    list-style-type:none;
+}
+
+#menu ul li{
+    margin: 0 0 0 0;
+    padding-right:20px;
+    display:inline;
+    float:left;
+    text-decoration:none;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    font-size:14px;
+    color: navy;
+    font-family:sans-serif;
+}
+
+#menu ul li a:hover{
+    text-decoration:underline;
+}
+
+.ads{
+    margin-left: 20px;
+    width: 590px;
+    height: 80px;
+    background-color: transparent;
+    border-bottom: thin dashed gray;
+}
+
+.listDate{
+    width: 50px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.listPhoto{
+    text-align:center;
+    width: 80px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.listAds{
+    width: 430px;
+}
+
+.listAds a{
+    text-decoration: none;
+    color: navy;
+    font-family:sans-serif;
+}
+
+.listAds a:hover{
+    font-weight:bold;
+}
+
+.listCat{
+    width: 50px;
+}
+
+#form{
+    font-size: 18px;
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+#footer{
+    text-align:left;
+    width:auto;
+    padding-left:20px;
+    margin-left: 0px;
+    margin-top:20px;
+    height:100px;
+}
+
+
+/* for new page */
+#new-container{
+    margin-left: 50px;
+    width: 700px;
+    height: auto;
+    background-color: transparent;
+}
+
+#new-form-left{
+    margin-top:20px;
+    margin-bottom:50px;
+}
+
+#new-form-right{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:40px;
+    background-color:#ffffb3;
+    margin-left:50px;
+    float:right;
+    width:200px;
+}
+
+.label{
+    font-weight:bold;
+    text-align:right;
+}
+
+.eng{
+    font-size:12px;
+}
+
+.my{
+    font-size:10px;
+    font-style:italic;
+}
+
+/* show page */
+#show-container{
+    margin-left: 50px;
+    width: 700px;
+    height: auto;
+    background-color: transparent;
+}
+
+#show{
+    margin-top:20px;
+    margin-bottom:50px;
+}
+
+.labelshow{
+    font-weight:bold;
+    text-align:left;
+}

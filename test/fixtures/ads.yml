@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ad_name: MyString
+  description: MyText
+  user_email: MyString
+  price: 9.99
+  categories: 1
+
+two:
+  ad_name: MyString
+  description: MyText
+  user_email: MyString
+  price: 9.99
+  categories: 1

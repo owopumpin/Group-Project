@@ -1,0 +1,31 @@
+<div id="form">
+  <% form_tag "/ads/find" do %>
+  <table width="510px">
+    <tr>
+      <td><span style="font-size:10px;">Listing Ads for "<b>all</b>"</span></td>
+    </tr>
+    <tr>
+      <td width="200"><%= text_field_tag :search_string %></td>
+      <td><%=  select_tag("search", options_for_select(%w{Ad Category})) %><%= submit_tag "Search" %></td>
+    </tr>
+  </table>
+  <% end %>
+</div>
+
+<div id="list">
+  <% for ad in @ads %>
+  <div class="ads">
+    <table>
+      <tr>
+        <td class="listDate"><%=h ad.created_at.strftime("%m-%d-%Y at %I:%M%p") %></td>
+        <td class="listPhoto">Poto</td>
+        <td class="listAds">
+          <%= link_to ad.ad_name, ad %><br/>
+          <%=h ad.price %>
+        </td>
+        <td class="listCat"><%=h ad.cat %></td>
+      </tr>
+    </table>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<div id="show-container">
+<span>Advertised by  <%=h @ad.user_email %>  <%=h @ad.created_at.strftime("%m-%d-%Y %I:%M%p") %>.</span>
+<br/>
+<div id="show">
+    <table>
+      <tr>
+        <td class="labelshow">Ad's Name</td>
+        <td><%=h @ad.ad_name %></td>
+      </tr>
+      <tr>
+        <td class="labelshow">Description</td>
+        <td><%=h @ad.description %></td>
+      </tr>
+      <tr>
+        <td class="labelshow">Contact</td>
+        <td><%=h @ad.user_email %></td>
+      </tr>
+      <tr>
+        <td class="labelshow">Price</td>
+        <td><%=h @ad.price %></td>
+      </tr>
+      <tr>
+        <td class="labelshow">Category</td>
+        <td><%=h @ad.cat %></td>
+      </tr>
+    </table>
+  </div>
+</div>
