@@ -4,6 +4,9 @@
 <div id="show">
     <table>
       <tr>
+        <td colspan="2"><%= image_tag(@ad.image) %></td>
+      </tr>
+      <tr>
         <td class="labelshow">Ad's Name</td>
         <td><%=h @ad.ad_name %></td>
       </tr>
@@ -25,4 +28,56 @@
       </tr>
     </table>
   </div>
+</div>
+
+<div id="list-feedback">
+  <h2>Feedback for this Ad:</h2>
+<% @feedbacks.each do |feedback| %>
+  <table>
+  <tr>
+    <td class="labelshow">Name</td>
+    <td><%=h feedback.name %></td>
+  </tr>
+  <tr>
+    <td class="labelshow">Email</td>
+    <td><%=h feedback.email %></td>
+  </tr>
+  <tr>
+    <td class="labelshow">Comment</td>
+    <td><%=h feedback.comment %></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+  </table>
+<% end %>
+</div>
+
+<div id="feedback">
+<h2>Post your comment here:</h2>
+  <table>
+      <% form_for(@feedback) do |f| %>
+      <tr>
+        <td colspan="2"><%= f.error_messages %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :name%></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td class="label"><%= f.label :email %></td>
+        <td><%= f.text_field :email %></td>
+      </tr>
+      <tr>
+        <td class="label" valign="top"><%= f.label :comment %></td>
+        <td><%= f.text_area :comment, :size=>"35x11" %></td>
+      </tr>
+      <tr>
+        <td colspan="2"><%= hidden_field_tag 'feedback[adid]', params[:id] %></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><%= f.submit "Create" %></td>
+      </tr>
+      <% end %>
+    </table>
 </div>

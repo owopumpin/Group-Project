@@ -9,29 +9,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090910063537) do
+ActiveRecord::Schema.define(:version => 20091015063637) do
 
   create_table "ads", :force => true do |t|
     t.string   "ad_name"
     t.text     "description"
     t.string   "user_email"
     t.decimal  "price"
-    t.integer  "categories"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cat"
+    t.string   "image"
   end
 
-  create_table "categories", :force => true do |t|
-    t.string   "category"
+  create_table "data_files", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "cats", :force => true do |t|
-    t.string   "category"
+  create_table "feedbacks", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "adid"
   end
 
 end

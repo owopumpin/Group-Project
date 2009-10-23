@@ -23,6 +23,8 @@ class AdsController < ApplicationController
   # GET /ads/1
   # GET /ads/1.xml
   def show
+    @feedbacks = Feedback.find_all_by_adid(params[:id])
+    @feedback = Feedback.new
     @ad = Ad.find(params[:id])
 
     respond_to do |format|
@@ -54,7 +56,6 @@ class AdsController < ApplicationController
 
     respond_to do |format|
       if @ad.save
-        flash[:notice] = 'Ad was successfully created.'
         format.html { redirect_to(@ad) }
         format.xml  { render :xml => @ad, :status => :created, :location => @ad }
       else

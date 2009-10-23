@@ -16,38 +16,32 @@
 
 <div id="new-form-left">
     <table>
-      <% form_for(@ad) do |f| %>
       <tr>
-        <td colspan="2"><%= f.error_messages %></td>
+        <td class="labelshow">Ad's Name</td>
+        <td><%=h @ad.ad_name %></td>
       </tr>
       <tr>
-        <td class="label"><%= f.label :ad_name %></td>
-        <td><%= f.text_field :ad_name %></td>
+        <td class="labelshow">Description</td>
+        <td><%=h @ad.description %></td>
       </tr>
       <tr>
-        <td class="label"><%= f.label :description %></td>
-        <td><%= f.text_area :description, :size=>"35x11" %></td>
+        <td class="labelshow">Contact</td>
+        <td><%=h @ad.user_email %></td>
       </tr>
       <tr>
-        <td class="label"><%= f.label :user_email %></td>
-        <td><%= f.text_field :user_email %></td>
+        <td class="labelshow">Price</td>
+        <td><%=h @ad.price %></td>
       </tr>
       <tr>
-        <td class="label"><%= f.label :price %></td>
-        <td><%= f.text_field :price %></td>
+        <td class="labelshow">Category</td>
+        <td><%=h @ad.cat %></td>
       </tr>
-      <tr>
-        <td class="label"><%= f.label :"Category" %></td>
-        <td><%= f.text_field :cat %></td>
-      </tr>
-      <tr>
-        <td class="label"><%= f.label :image %></td>
-        <td><%= f.text_field :image %></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="right"><%= f.submit "Create" %></td>
-      </tr>
-      <% end %>
     </table>
   </div>
 </div>
+
+<h3><p>Upload Picture:</p></h3>
+<%= form_tag({:action => 'upload'}, :multipart => true) %>
+<p><label for="upload_file">Select File</label> :
+<%= file_field 'upload', 'datafile' %></p>
+<p><%= submit_tag "Upload" %>

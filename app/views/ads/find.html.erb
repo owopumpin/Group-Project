@@ -18,7 +18,7 @@
     <table>
       <tr>
         <td class="listDate"><%=h ad.created_at.strftime("%m-%d-%Y at %I:%M%p") %></td>
-        <td class="listPhoto">Poto</td>
+        <td class="listPhoto"><%= image_tag(ad.image, :size=>"100x100") %></td>
         <td class="listAds">
           <%= link_to ad.ad_name, ad %><br/>
           <%=h ad.price %>
